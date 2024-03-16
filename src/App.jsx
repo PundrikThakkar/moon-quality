@@ -8,6 +8,7 @@ function App() {
   const imgStyle = {
     height: "600px",
     width: "600px",
+    borderRadius: "50%",
   };
 
   const handleChange = (e) => {
