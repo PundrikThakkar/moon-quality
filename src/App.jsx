@@ -11,6 +11,11 @@ function App() {
     borderRadius: "50%",
   };
 
+  const optionStyle = {
+    height: "50px",
+    width: "200px",
+  };
+
   const handleChange = (e) => {
     const selectedPx = e.target.value;
     setPx(selectedPx);
@@ -52,7 +57,12 @@ function App() {
       <div>
         <img src={imgSrc} alt="moon" style={imgStyle} />
       </div>
-      <select value={px} name="moon" id="moon" onChange={handleChange}>
+      <select
+        value={px}
+        name="moon"
+        id="moon"
+        onChange={handleChange}
+        style={optionStyle}>
         <option value="144">144p</option>
         <option value="240">240p</option>
         <option value="360">360p</option>
