@@ -13,6 +13,10 @@ function App() {
   const handleChange = (e) => {
     const selectedPx = e.target.value;
     setPx(selectedPx);
+
+    if (selectedPx === "1080") {
+      playAudio();
+    }
     switch (selectedPx) {
       case "144":
         setImgSrc("/images/144moon.jpeg");
@@ -35,6 +39,11 @@ function App() {
       default:
         setImgSrc("/images/144moon.jpeg");
     }
+  };
+
+  const playAudio = () => {
+    const audio = new Audio("/images/moon.m4a");
+    audio.play();
   };
 
   return (
